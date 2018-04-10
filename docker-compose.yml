@@ -1,0 +1,27 @@
+version: '3.3'
+services:
+  client:
+    image: node:9
+    container_name: c_client
+    working_dir: /app
+    environment:
+      - NODE_ENV=${ENV:-development}
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    ports:
+      - "5000:5000"
+    command: bash -c "npm install && npm run ${ENV:-development}"
+
+  server:
+    image: node:9
+    container_name: c_server
+    working_dir: /app
+    environment:
+      - NODE_ENV=${ENV:-development}
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    ports:
+      - "6000:6000"
+    command: bash -c "npm install && npm run ${ENV:-development}"

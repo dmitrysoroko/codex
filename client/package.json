@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "development": "npm run clean && webpack-dev-server --inline --host 0.0.0.0 --port 5000 --hot",
+    "clean": "rm -rf dist/*"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "react": "16.3.1",
+    "react-dom": "16.3.1",
+    "react-router-dom": "4.2.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "3.1.1",
+    "babel-loader": "^7.1.4",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-react-hmre": "1.1.1",
+    "url-loader": "^0.6.2",
+    "file-loader": "1.1.11",
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.20.3"
+  }
+}
